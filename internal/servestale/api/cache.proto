@@ -1,0 +1,35 @@
+syntax = "proto3";
+// 这是一个内部使用的api。用在核心服务与servestale sidecar交互的时候。
+option go_package = "github.com/vrealzhou/geekbang_go_final/servestale/api";
+option java_multiple_files = true;
+option java_package = "vreal.geekbang_go_final";
+option java_outer_classname = "MusicProto";
+
+
+import "api/music.proto";
+import "api/news.proto";
+import "google/protobuf/empty.proto";
+
+package servestale;
+
+// 更新music缓存。
+service Music {
+    // 更新Artist
+    rpc UpdateArtist (stream api.Artist) returns (google.protobuf.Empty) {}
+    // 更新Release
+    rpc UpdateRelease (stream api.Release) returns (google.protobuf.Empty) {}
+    // 更新Recording
+    rpc UpdateRecording (stream api.Recording) returns (google.protobuf.Empty) {}
+    // 更新Artwork
+    rpc UpdateArtwork (stream api.Artwork) returns (google.protobuf.Empty){}
+}
+
+// The music service definition.
+service News {
+    // Get artist by arid
+    rpc UpdateArtcle (stream api.Article) returns (google.protobuf.Empty) {}
+    // Get release information by arid
+    rpc UpdateCollection (stream api.CollectionResponse) returns (google.protobuf.Empty) {}
+    // Get recording information by arid
+    rpc UpdateImage (stream api.Image) returns (google.protobuf.Empty){}
+}

@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+option go_package = "github.com/vrealzhou/geekbang_go_final/api";
+option java_multiple_files = true;
+option java_package = "vreal.geekbang_go_final";
+option java_outer_classname = "MusicProto";
+
+import "google/protobuf/wrappers.proto";
+package api;
+
+// The news service definition.
+service News {
+    // Get artist by arid
+    rpc GetArtcle (google.protobuf.StringValue) returns (Article) {}
+    // Get release information by arid
+    rpc GetCollection (GetCollectionRequest) returns (CollectionResponse) {}
+    // Get recording information by arid
+    rpc GetImage (stream google.protobuf.StringValue) returns (stream Image) {}
+}
+
+message GetCollectionRequest {
+    string id = 1;
+    uint32 limit = 2;
+    uint32 offset = 3;
+}
+
+message CollectionResponse {
+    string id = 1;
+    repeated string articles = 2;
+    uint32 limit = 3;
+    uint32 offset = 4;
+    uint32 total = 5;
+}
+
+message Article {
+    string id = 1;
+    string text = 2;
+    repeated string related = 3;
+    repeated string images = 4;
+}
+
+message Image {
+    string id = 1;
+    string title = 2;
+    repeated ImageCrop crops = 3;
+}
+
+message ImageCrop {
+    string url = 1;
+    uint32 width = 2;
+    uint32 height = 3;
+}

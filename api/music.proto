@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+option go_package = "github.com/vrealzhou/geekbang_go_final/api";
+option java_multiple_files = true;
+option java_package = "vreal.geekbang_go_final";
+option java_outer_classname = "MusicProto";
+
+
+import "google/protobuf/wrappers.proto";
+package api;
+
+// The music service definition.
+service Music {
+    // Get artist by arid
+    rpc GetArtist (google.protobuf.StringValue) returns (Artist) {}
+    // Get release information by arid
+    rpc GetRelease (google.protobuf.StringValue) returns (Release) {}
+    // Get recording information by arid
+    rpc GetRecording (google.protobuf.StringValue) returns (Recording) {}
+    // Get artwork by arid
+    rpc GetArtwork (stream google.protobuf.StringValue) returns (stream Artwork) {}
+}
+
+message Artwork {
+    string arid = 1;
+    string url = 2;
+    string title = 3;
+    uint32 width = 4;
+    uint32 height = 5;
+    uint32 size = 6;
+}
+
+message Artist {
+    string arid = 1;
+    string name = 2;
+    string type = 3;
+    repeated string artworks = 4;
+}
+
+message Recording {
+    string arid = 1;
+    string title = 2;
+    uint32 duration = 3;
+    string metadata = 4;
+    repeated string artists = 5;
+    repeated string releases = 6;
+    repeated string artworks = 7;
+}
+
+message Release {
+    string arid = 1;
+    string title = 2;
+    uint32 year = 3;
+    string recordLabel = 4;
+    repeated string artists = 5;
+    repeated string recordings = 6;
+    repeated string artworks = 7;
+}
