@@ -1,4 +1,4 @@
-<mxfile modified="2021-08-25T06:03:16.379Z" host="app.diagrams.net" agent="5.0 (Macintosh)" etag="OG3AUQX-O6YdX4yW92Fw" version="14.1.8" type="github" pages="2">
+<mxfile modified="2021-08-25T09:35:56.098Z" host="app.diagrams.net" agent="5.0 (Macintosh)" etag="rLdd0tlExQcU_CBmbd3M" version="14.1.8" type="github" pages="2">
   <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Current">
     <mxGraphModel dx="1186" dy="689" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -223,7 +223,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="OOak9RPOrlkzghhdnMFz-42" value="&lt;div&gt;Long term&lt;/div&gt;&lt;div&gt;cache for&lt;/div&gt;&lt;div&gt;downgrade&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="OOak9RPOrlkzghhdnMFz-41" vertex="1" connectable="0">
+        <mxCell id="OOak9RPOrlkzghhdnMFz-42" value="&lt;div&gt;servestale&lt;/div&gt;&lt;div&gt;cache&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="OOak9RPOrlkzghhdnMFz-41" vertex="1" connectable="0">
           <mxGeometry x="0.3101" y="-2" relative="1" as="geometry">
             <mxPoint x="-0.54" y="27" as="offset" />
           </mxGeometry>
@@ -469,7 +469,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="pf_Lx7LGTgffN59WLh7V-39" value="&lt;div&gt;Long term&lt;/div&gt;&lt;div&gt;cache for&lt;/div&gt;&lt;div&gt;downgrade&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="pf_Lx7LGTgffN59WLh7V-38">
+        <mxCell id="pf_Lx7LGTgffN59WLh7V-39" value="&lt;div&gt;servestale&lt;/div&gt;&lt;div&gt;cache&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="pf_Lx7LGTgffN59WLh7V-38">
           <mxGeometry x="0.3101" y="-2" relative="1" as="geometry">
             <mxPoint x="-0.54" y="27" as="offset" />
           </mxGeometry>
